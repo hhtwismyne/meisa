@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Permintaan Maaf</title>
+  <link rel="stylesheet" href="style.css"><!-- opsional -->
+</head>
+<body>
+  <div class="container">
+    <h1>Maaf yahh, Meisaaa...</h1>
+    <p>Maafin david yah, david salah...</p>
+
+    <button id="longBtn">Baca inii</button>
+<div class="longtext" id="longtext">
+  <p>hayy Meisaa... maaf yaa baru ngirim sekarang, ak mau minta maaf sekali lagi soal kemarin, soal ak lupa balas chat meisa, bikin Meisa betmut, bikin Meisa kecewa, bikin Meisa marah. Kemarin ak uda kirim di wa yahh jadi ak mau minta maaf sekali lagi, ak minta maaf kaena ngerasa bersalah sama meisa. Ak usahain ga akan gini lagi, ak usahain bisa lebih fast respon walaupun lagi main gem. Maaf yah meisa kalo cara minta maaf ak agak kurang, mungkin malah bikin Meisa tambah betmut. maaf yahh. makasi yaaa uda bacaa babaiii.</p>
+  <!-- dst. -->
+</div>
+
+
+    <div class="button-wrapper">
+      <button id="yesBtn">Iya</button>
+      <div class="no-btn-wrapper">
+        <button id="noBtn">Gamau</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script><!-- opsional -->
+  <script>
+    document.getElementById('yesBtn').addEventListener('click', () => {
+      // pindah ke halaman thankyou.html
+      window.location.href = 'mks.html';
+    });
+
+    // tetap biarkan tombol Tidak lari:
+    const noBtn = document.getElementById('noBtn');
+    const wrap = document.querySelector('.no-btn-wrapper');
+    const longBtn  = document.getElementById('longBtn');
+    const longtext = document.getElementById('longtext');
+    function moveNo() {
+      const pad = 5;
+      const maxX = wrap.clientWidth  - noBtn.offsetWidth  - pad;
+      const maxY = wrap.clientHeight - noBtn.offsetHeight - pad;
+      noBtn.style.left = Math.floor(Math.random()*maxX + pad) + 'px';
+      noBtn.style.top  = Math.floor(Math.random()*maxY + pad) + 'px';
+    }
+
+    longBtn.addEventListener('click', () => {
+        longtext.style.display = 
+          longtext.style.display === 'block' ? 'none' : 'block';
+      });
+    noBtn.addEventListener('mouseover', moveNo);
+    noBtn.addEventListener('touchstart', moveNo);
+  </script>
+</body>
+</html>

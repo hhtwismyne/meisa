@@ -1,0 +1,110 @@
+/* Reset dan dasar */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* Atur full-screen dan font */
+  html, body {
+    width: 100%;
+    height: 100%;
+    font-family: Arial, sans-serif;
+    background-color: #f2dadf;
+  }
+  
+  /* Container utama untuk setiap halaman */
+  .container {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;  /* center vertikal */
+    align-items: center;      /* center horizontal */
+    text-align: center;
+    padding: 24px;
+  }
+  
+  /* Judul */
+  h1 {
+    margin-bottom: 12px;
+    font-size: 1.6rem;
+    color: #333;
+  }
+  
+  /* Paragraf */
+  p {
+    margin-bottom: 24px;
+    font-size: 1rem;
+    color: #555;
+  }
+  
+  /* Wrapper tombol: horizontal & centered */
+  .button-wrapper {
+    display: flex;
+    justify-content: center;  /* pusatkan */
+    align-items: center;
+    gap: 12px;                 /* jarak antar tombol */
+    margin-top: 20px;
+  }
+  
+  /* Tombol umum (Iya & Tidak) */
+  button {
+    padding: 8px 14px;        /* lebih kecil */
+    font-size: 0.9rem;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    min-width: 80px;          /* jangan terlalu kecil */
+  }
+  
+  /* Tombol Iya */
+  #yesBtn {
+    background-color: #60c964;
+    color: #fff;
+  }
+  
+  /* Bungkus tombol Tidak agar bisa bergerak */
+  .no-btn-wrapper {
+    position: relative;
+    width: 160px;   /* lebar area gerak */
+    height: 160px;   /* tinggi area gerak */
+  }
+  
+  /* Tombol Tidak */
+  #noBtn {
+    background-color: #e4594f;
+    color: #fff;
+    position: absolute;       /* agar bisa diposisikan bebas */
+    top: 0;
+    left: 0;
+    transition: top 0.2s ease, left 0.2s ease;
+  }
+  
+  /* (Opsional) Longtext jika pakai */
+  .longtext {
+    display: none;
+    width: 100%;
+    max-width: 320px;
+    max-height: 150px;
+    overflow-y: auto;
+    background-color: #fff;
+    padding: 16px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    color: #333;
+    text-align: left;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  }
+  
+  /* Halaman terima kasih */
+  #thankyouPage {
+    display: none;  /* tampilkan via JS */
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 24px;
+  }
+  
